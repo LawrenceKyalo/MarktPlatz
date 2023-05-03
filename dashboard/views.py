@@ -10,3 +10,5 @@ def index(request):
     return render(request, 'dashboard/index.html', {
         'items': items,
     })
+
+
