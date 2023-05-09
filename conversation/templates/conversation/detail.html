@@ -3,7 +3,7 @@
 {% block title%} Conversation {% endblock %}
 
 {% block content %}
-<h1 class="mb-6 text-3xl"> Conversation with {{ message.created_by.username }} </h1>
+<h1 class="mb-6 text-3xl"> {{ message.created_by.username }} </h1>
 
 <div class="space-y-6 mt-4 mb-4">
     {% for message in conversation.messages.all %}        
