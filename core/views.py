@@ -32,7 +32,7 @@ def signup(request):
     else:
         form = SignupForm()
 
-    messages.success(request, "User creation failed, try again")
+    messages.error(request, "User creation failed, try again")
     return render(request, 'core/signup.html', {
         'form': form
     })
