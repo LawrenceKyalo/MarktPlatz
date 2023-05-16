@@ -27,10 +27,12 @@ def signup(request):
         if form.is_valid():
             form.save()
 
+            messages.success(request, "User creation successful")
             return redirect('/login/')
     else:
         form = SignupForm()
 
+    messages.success(request, "User creation failed, try again")
     return render(request, 'core/signup.html', {
         'form': form
     })
