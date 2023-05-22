@@ -30,6 +30,16 @@
     </nav>
 
     <div class="px-6 py-6">
+        <div>
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        
         {% block content %}
         {% endblock %}
     </div>
